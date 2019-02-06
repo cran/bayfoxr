@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="S. Brewster Malevich" />
+
+<meta name="date" content="2019-02-01" />
+
+<title>Introduction</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#header {
+text-align: center;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Introduction</h1>
+<h4 class="author"><em>S. Brewster Malevich</em></h4>
+<h4 class="date"><em>2019-02-01</em></h4>
+
+
+
+<p>This is a tutorial covering the basic features of bayfoxr. This tutorial assumes that you have a <a href="https://www.r-project.org/">recent version of R installed</a> and are familiar with the R language.</p>
+<div id="what-is-bayfoxr" class="section level2">
+<h2>What is bayfoxr?</h2>
+<p>bayfoxr is a suite of linear Bayesian calibration models for planktic core top foraminiferal δ18O (δ18Oc) and sea surface temperature (SST). These calibrations are especially useful because they capture the uncertainty in the relationship between modern SSTs and coretop δ18Oc. This package is a companion to a paper currently under preparation for the journal “Paleoceanography and Paleoclimatology”.</p>
+</div>
+<div id="citing-bayfoxr-in-your-research" class="section level2">
+<h2>Citing bayfoxr in your research</h2>
+<p>Please cite our work if you use bayfoxr in your research. We have a paper currently in preparation and I’ll be sure to update this section with the citation as soon as the paper is out.</p>
+<p>To cite the code repository directly use:</p>
+<p><em>Malevich, Steven B., 2019. bayfoxr. &lt;<a href="https://github.com/brews/bayfoxr" class="uri">https://github.com/brews/bayfoxr</a> &gt;.</em></p>
+<p>Alternatively, you can cite the package in R’s CRAN repository. You can see this information by running <code>citation(&quot;bayfoxr&quot;)</code> in an R session.</p>
+</div>
+<div id="installing-and-loading-bayfoxr" class="section level2">
+<h2>Installing and loading bayfoxr</h2>
+<p>You can install bayfoxr from the CRAN repository with:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;bayfoxr&quot;</span>)</a></code></pre></div>
+<p>Development for bayfoxr is hosted at <a href="https://github.com/brews/bayfoxr" class="uri">https://github.com/brews/bayfoxr</a>. You can download and install directly from this github repository with the <code>devtools</code> package:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;brews/bayfoxr&quot;</span>)</a></code></pre></div>
+<p>This will give you the development versions of the package. It may be unstable. I only recommend this for advanced users.</p>
+<p>Once bayfoxr has been installed, you can load it into your R session like any other R package:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">library</span>(<span class="st">&quot;bayfoxr&quot;</span>)</a></code></pre></div>
+</div>
+<div id="predicting-sea-surface-temperature-and-foraminiferal-18o" class="section level2">
+<h2>Predicting sea surface temperature and foraminiferal δ18O</h2>
+<p>bayfoxr revolves around two main functions, <code>predict_d18oc()</code> and <code>predict_seatemp()</code>. Unsurprisingly, these functions help us to predict δ18Oc or SST. Let’s walk through a very simple case with some example sediment core data from Bass River. This data is bundled with bayfoxr, but feel free to use your own data – just be sure it doesn’t contain missing values.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">data</span>(<span class="st">&quot;bassriver&quot;</span>)  <span class="co"># Load the &quot;bassriver&quot; dataframe.</span></a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="kw">head</span>(bassriver)  <span class="co"># Take a quick look at what the data looks like.</span></a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="co">#&gt;    depth  d18o</span></a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="co">#&gt; 1 345.17 -3.49</span></a>
+<a class="sourceLine" id="cb4-6" title="6"><span class="co">#&gt; 2 345.48 -2.42</span></a>
+<a class="sourceLine" id="cb4-7" title="7"><span class="co">#&gt; 3 346.82 -3.03</span></a>
+<a class="sourceLine" id="cb4-8" title="8"><span class="co">#&gt; 4 347.06 -3.04</span></a>
+<a class="sourceLine" id="cb4-9" title="9"><span class="co">#&gt; 5 349.04 -4.24</span></a>
+<a class="sourceLine" id="cb4-10" title="10"><span class="co">#&gt; 6 349.19 -3.37</span></a></code></pre></div>
+<p>The example data are marine core samples from <a href="https://doi.org/10.1029/2007PA001465">John et al. (2008)</a>. The dataframe has two columns: “depth”, giving down-core depth in meters, and “d18o”, foraminiferal (<em>Morozovella spp.</em>) calcite δ18O samples (‰ VPDB). The core samples cover the <a href="https://en.wikipedia.org/wiki/Paleocene%E2%80%93Eocene_Thermal_Maximum">Paleocene-Eocene thermal maximum (PETM)</a>.</p>
+<p>Now run this information through the <code>predict_seatemp()</code> function:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">sst &lt;-<span class="st"> </span><span class="kw">predict_seatemp</span>(bassriver<span class="op">$</span>d18o, <span class="dt">d18osw =</span> <span class="fl">0.0</span>, <span class="dt">prior_mean =</span> <span class="fl">30.0</span>, </a>
+<a class="sourceLine" id="cb5-2" title="2">                       <span class="dt">prior_std =</span> <span class="fl">20.0</span>)</a></code></pre></div>
+<p>The predict function spits out a <code>prediction</code> object. Note that we need to specify δ18O for seawater in units ‰ VSMOW (<code>d18osw</code>), and a prior mean and standard deviation for our SST inference.</p>
+<p>The <code>sst</code> variable contains an ensemble, or empirical distribution, rather than single prediction points because the calibration is a Bayesian regression model. This ensemble is in <code>sst[[&#39;ensemble&#39;]]</code>. Here we get median and 90% interval for the prediction:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">quants &lt;-<span class="st"> </span><span class="kw">quantile</span>(sst, <span class="dt">probs =</span> <span class="kw">c</span>(<span class="fl">0.05</span>, <span class="fl">0.50</span>, <span class="fl">0.95</span>))</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="kw">head</span>(quants)  <span class="co"># Just see the top of the data...</span></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="co">#&gt;            5%      50%      95%</span></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="co">#&gt; [1,] 27.49985 31.41207 35.34253</span></a>
+<a class="sourceLine" id="cb6-5" title="5"><span class="co">#&gt; [2,] 22.89976 26.79676 30.64125</span></a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="co">#&gt; [3,] 25.47354 29.38227 33.20536</span></a>
+<a class="sourceLine" id="cb6-7" title="7"><span class="co">#&gt; [4,] 25.44748 29.41367 33.26830</span></a>
+<a class="sourceLine" id="cb6-8" title="8"><span class="co">#&gt; [5,] 30.85150 34.60419 38.44847</span></a>
+<a class="sourceLine" id="cb6-9" title="9"><span class="co">#&gt; [6,] 26.99319 30.84986 34.71672</span></a></code></pre></div>
+<p>We can also make a quick and dirty plot to visualize <code>sst</code>:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">predictplot</span>(<span class="dt">x =</span> bassriver<span class="op">$</span>depth, <span class="dt">y =</span> sst, <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">20</span>, <span class="dv">40</span>), </a>
+<a class="sourceLine" id="cb7-2" title="2">            <span class="dt">ylab =</span> <span class="st">&quot;SST (°C)&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Depth (m)&quot;</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>You can see more options for <code>predictplot()</code> with <code>help(predictplot)</code>. This applies to any of the functions I’ve mentioned in this tutorial.</p>
+<p>Of course, predictions with the <code>predict_d18oc()</code> function are very similar to what we’ve already seen. Here we get a δ18Oc prediction from some made-up SST values. Note that we don’t need to specify a prior mean or standard deviation with <code>predict_d18oc()</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">d18oc &lt;-<span class="st"> </span><span class="kw">predict_d18oc</span>(<span class="kw">c</span>(<span class="dv">24</span>, <span class="dv">25</span>, <span class="dv">23</span>), <span class="dt">d18osw =</span> <span class="fl">0.0</span>)</a></code></pre></div>
+<p>We can use with this prediction object just like before:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">print</span>(<span class="kw">quantile</span>(d18oc))</a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="co">#&gt;             0%       25%       50%       75%       100%</span></a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="co">#&gt; [1,] -3.830263 -2.154400 -1.790512 -1.421858  0.6450355</span></a>
+<a class="sourceLine" id="cb9-4" title="4"><span class="co">#&gt; [2,] -4.079929 -2.390524 -2.017354 -1.645911 -0.2286378</span></a>
+<a class="sourceLine" id="cb9-5" title="5"><span class="co">#&gt; [3,] -3.489937 -1.914891 -1.556574 -1.196472  0.5486787</span></a>
+<a class="sourceLine" id="cb9-6" title="6"></a>
+<a class="sourceLine" id="cb9-7" title="7"><span class="kw">predictplot</span>(<span class="dt">y=</span>d18oc, <span class="dt">ylab=</span><span class="st">&quot;δ18Oc (‰ VPDB)&quot;</span>, <span class="dt">xlab=</span><span class="st">&#39;Sample&#39;</span>, <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="fl">3.5</span>, <span class="dv">0</span>))</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+</div>
+<div id="the-four-calibration-models" class="section level2">
+<h2>The four calibration models</h2>
+<p>There are four calibration models available for the <code>predict_d18oc()</code> and <code>predict_seatemp()</code> prediction functions.</p>
+<ul>
+<li>Pooled annual</li>
+<li>Hierarchical annual</li>
+<li>Pooled seasonal</li>
+<li>Hierarchical seasonal</li>
+</ul>
+<p>The “pooled annual” model is the simplest case, as it has all foraminiferal species pooled together and calibrated against annual SST. The “hierarchical annual” model is similar, but accounts for some species-specific differences in calibration parameters. There are also the “pooled seasonal” and “hierarchical seasonal” models. These are similar to those described above, but use SSTs that are averaged to reflect general temperature preferences of foraminifera. See our 2019 paper for further details on these calibration models and their implementation.</p>
+<p>By default, <code>predict_d18oc()</code> and <code>predict_seatemp()</code> use the pooled annual calibration model. To use a seasonal model set the <code>seasonal_seatemp</code> argument to <code>TRUE</code>. To use a hierarchical model, pass a foraminiferal species name string to the <code>foram</code> argument. So, for example, our earlier</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">d18oc &lt;-<span class="st"> </span><span class="kw">predict_d18oc</span>(<span class="kw">c</span>(<span class="dv">24</span>, <span class="dv">25</span>, <span class="dv">23</span>), <span class="dt">d18osw =</span> <span class="fl">0.0</span>)</a></code></pre></div>
+<p>uses the pooled annual model. To get other variations:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="co">#d18oc &lt;- predict_d18oc(c(24, 25, 23), d18osw = 0.0, seasonal_seatemp = TRUE)  # Pooled seasonal</span></a>
+<a class="sourceLine" id="cb11-2" title="2"></a>
+<a class="sourceLine" id="cb11-3" title="3">d18oc &lt;-<span class="st"> </span><span class="kw">predict_d18oc</span>(<span class="kw">c</span>(<span class="dv">24</span>, <span class="dv">25</span>, <span class="dv">23</span>), <span class="dt">d18osw =</span> <span class="fl">0.0</span>, <span class="dt">foram =</span> <span class="st">&quot;G. bulloides&quot;</span>)  <span class="co"># Hierarchical annual for bulloides</span></a>
+<a class="sourceLine" id="cb11-4" title="4"></a>
+<a class="sourceLine" id="cb11-5" title="5"><span class="co"># Hierarchical seasonal for bulloides:</span></a>
+<a class="sourceLine" id="cb11-6" title="6">d18oc &lt;-<span class="st"> </span><span class="kw">predict_d18oc</span>(<span class="kw">c</span>(<span class="dv">24</span>, <span class="dv">25</span>, <span class="dv">23</span>), <span class="dt">d18osw =</span> <span class="fl">0.0</span>, <span class="dt">seasonal_seatemp =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb11-7" title="7">                       <span class="dt">foram =</span> <span class="st">&quot;G. bulloides&quot;</span>)</a></code></pre></div>
+<p>See <code>help(predict_d18oc)</code> or <code>help(predict_seatemp)</code> for more details including a full list of supported foram species.</p>
+<p>Generally, the hierarchical annual, hierarchical seasonal, and pooled annual models are recommended. See our 2019 paper for further details</p>
+</div>
+
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
